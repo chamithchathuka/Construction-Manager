@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Construction Upload</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css"
+          href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" type="text/css"-->
+    <!--href="../../css/bootstrap.min.css" />-->
+
+    <link rel="stylesheet" th:href="@{/css/main.css}"
+          href="../../css/main.css" />
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Construction Manager</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/update">Update</a></li>
+                <li class="right">Hello [[${#httpServletRequest.remoteUser}]]!</a></li>
+                <li class="right">
+                <form th:action="@{/logout}" method="post">
+                    <input type="submit" value="Sign Out"/>
+
+                </form>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<div class="container">
+place content here
+</div>
+
+</body>
+</html>
